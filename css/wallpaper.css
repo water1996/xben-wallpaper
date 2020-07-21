@@ -409,7 +409,30 @@ box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
     font-size: 14px;
     color: #999;
 }
+.xben-full-img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.9);
+    z-index: 99999999;
+    justify-content: center;
+    display: none;
+    top: 0;
+}
+.xben-full-img>img{
+    width: 100%;height:220px;position: absolute;top: 20%;
 
+}
+.xben-full-img>img.horizontal{
+transform:rotate(90deg);width: 150%;height:50%;top:24%;
+}
+
+
+.xben-full-img .horizontal-btn{
+    position: absolute;
+    top: 65%;
+
+}
 @media screen and (min-width: 768px) {
     #collapsibleNavbar{
 

@@ -98,6 +98,10 @@ function is_https() {
     <a id="toolBall" target="_blank" href="javascript:void(0);" class="uptoTop"></a>
 
     <div id="loadmore">小笨壁纸加载中……</div>
+	<div class="xben-full-img"><img
+            src="http://cdn-ali-img-staticbz.shanhutech.cn/bizhi/staticwp/202003/9bd0be8ab5506a7902f36eb4da95ebc1--3977944025.jpg"/>
+    <button class="horizontal-btn btn btn-primary">横屏显示</button>
+</div>
 </div>
 <!-- jQuery文件 -->
 <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

@@ -235,7 +235,7 @@ function ajaxBingWal(start, count) {
                     let title = jsonData.images[i].copyright.replace(copyright, "");
                     copyright = copyright.substring(1, copyright.length - 1);
                     console.log(copyright);
-                    newHtml += `<div class="xben-by-img"><img src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
+                    newHtml += `<div class="xben-by-img"><img data-realurl="http://cn.bing.com${jsonData.images[i].url}" src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
                     console.log();
                     $("#toolBall").css("display", "none");
                 }
@@ -273,7 +273,7 @@ function ajaxCiba(data) {
         url: "http://open.iciba.com/dsapi/",
         dataType: "jsonp",
         success: function (jsonData) {
-            var newHtml = `<div class="xben-day-img" ><img src="${jsonData.picture2}"  /><p class="note xben-note" title="${jsonData.translation}"><span onclick="$('audio')[0].play();" title="点击朗读" class="ciba-eng">${jsonData.content}</span><span>${jsonData.note}    <span title="${jsonData.love}人喜欢" class="ciba-love" onclick="$('.love-count').html(parseInt($('.love-count').html()) + 1)"><span class="xben-love">♥</span>&nbsp;<span class="love-count">${jsonData.love}</span></span></span></p><audio src="${jsonData.tts}" hidden></audio></div>`;
+            var newHtml = `<div class="xben-day-img" ><img data-realurl="${jsonData.picture2}" src="${jsonData.picture2}"  /><p class="note xben-note" title="${jsonData.translation}"><span onclick="$('audio')[0].play();" title="点击朗读" class="ciba-eng">${jsonData.content}</span><span>${jsonData.note}    <span title="${jsonData.love}人喜欢" class="ciba-love" onclick="$('.love-count').html(parseInt($('.love-count').html()) + 1)"><span class="xben-love">♥</span>&nbsp;<span class="love-count">${jsonData.love}</span></span></span></p><audio src="${jsonData.tts}" hidden></audio></div>`;
             $("#walBox").append(newHtml);
             $("#toolBall").attr('href', seting.downApi + jsonData.picture2);    // 下载链接
         }
@@ -428,8 +428,30 @@ var imgDom;
 // 全屏展示图片
 // 参数：图片链接
 function showImg(img) {
-    imgDom = $('<img>').attr('id', 'full-img').attr('src', img).appendTo('body');
+    if(isPC()){
+        imgDom = $('<img>').attr('id', 'full-img').attr('src', img).appendTo('body');
+        return;
+    }
+    if($(".xben-full-img").is(":hidden")){
+        $(".xben-full-img").css("display","flex");
+        $(".xben-full-img>img").attr("src",img);
+        $(".xben-full-img>img").removeClass("horizontal");
+        $(".horizontal-btn").show();
+    }
+
 }
+//横屏显示
+$(".horizontal-btn").click(function(){
+    $(".xben-full-img>img").addClass("horizontal");
+    $(this).hide();
+})
+
+$(".xben-full-img").click(function(){
+    $(this).hide();
+});
+$(".xben-full-img .horizontal-btn").click((e)=>{
+    e.stopPropagation();
+})
 
 function loadData360Search() {
     var text = document.getElementById("360text").value;
