@@ -230,7 +230,7 @@ function ajaxBingWal(start, count) {
                     let copyright = getParenthesesStr(jsonData.images[i].copyright);
                     let title = jsonData.images[i].copyright.replace(copyright, "");
                     copyright = copyright.substring(1, copyright.length - 1);
-                    newHtml += `<div class="xben-by-img"><img data-realurl="http://cn.bing.com${jsonData.images[i].url}" src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="downApi${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
+                    newHtml += `<div class="xben-by-img"><img data-realurl="http://cn.bing.com${jsonData.images[i].url}" src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
                     $("#toolBall").css("display", "none");
                 }
 
