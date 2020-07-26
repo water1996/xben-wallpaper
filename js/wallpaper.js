@@ -223,20 +223,14 @@ function ajaxBingWal(start, count) {
                 $("#walBox").append(newHtml);   // 全屏滚动插件css
             }
             for (var i = 0; i < jsonData.images.length; i++) {
-                if (jsonData.images[i].wp === true) { // BING官方不让下载的图片处理
-                    downUrl = 'http://cn.bing.com/hpwp/' + jsonData.images[i].hsh;
-                } else {
-                    downUrl = 'http://cn.bing.com' + jsonData.images[i].url;
-                }
+                    downUrl = seting.downApi+'http://cn.bing.com' + jsonData.images[i].url;
                 if (isPC()) {
                     newHtml += '<section data-url="' + downUrl + '" data-img="http://cn.bing.com' + jsonData.images[i].url + '"><p class="note">' + jsonData.images[i].copyright + '</p></section>';
                 } else {
                     let copyright = getParenthesesStr(jsonData.images[i].copyright);
                     let title = jsonData.images[i].copyright.replace(copyright, "");
                     copyright = copyright.substring(1, copyright.length - 1);
-                    console.log(copyright);
-                    newHtml += `<div class="xben-by-img"><img data-realurl="http://cn.bing.com${jsonData.images[i].url}" src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
-                    console.log();
+                    newHtml += `<div class="xben-by-img"><img data-realurl="http://cn.bing.com${jsonData.images[i].url}" src="http://cn.bing.com${jsonData.images[i].url}" /> <p class="title">${title}<a href="downApi${downUrl}" class="xben-bing-download">&nbsp|&nbsp立即下载</a></p><p class="copyright">${copyright}</p></div>`;
                     $("#toolBall").css("display", "none");
                 }
 
