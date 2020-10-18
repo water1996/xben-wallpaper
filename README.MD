@@ -6,7 +6,7 @@
 
 壁纸采集自 360壁纸库、必应首页的每日图片以及金山词霸开放平台
 
-相关api见 [https://zhouxiaoben.info/src/?p=9794](https://zhouxiaoben.info/src/?p=9794) 
+相关api见 [https://zhouxiaoben.info/?p=9794](https://zhouxiaoben.info/?p=9794) 
 
 本作品禁止任何形式的倒卖，转载请注明出处！
 
@@ -29,6 +29,6 @@
 -----
 **壁纸在线演示** [http://wallpaper.zhouxiaoben.info](http://wallpaper.zhouxiaoben.info)
 
-**壁纸详细介绍** [https://zhouxiaoben.info/src/?p=11771](https://zhouxiaoben.info/src/?p=11771)
+**壁纸详细介绍** [https://zhouxiaoben.info/?p=11771](https://zhouxiaoben.info/?p=11771)
 
 **GitHub** [https://github.com/water1996/xben-wallpaper](https://github.com/water1996/xben-wallpaper)
