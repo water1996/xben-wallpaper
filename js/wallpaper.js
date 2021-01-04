@@ -74,6 +74,7 @@ $(function () {
 
 // 加载壁纸容器中的壁纸
 function loadData(types, newload) {
+	$(".navbar-collapse").removeClass("show");
     if (types != seting.types || newload === true) {
 
         seting.types = types;
@@ -264,8 +265,10 @@ function ajaxBingWal(start, count) {
 function ajaxCiba(data) {
     $.ajax({
         type: "GET",
-        url: "http://open.iciba.com/dsapi/",
+        url: "https://zhouxiaoben.info/iciba/dsapi/",
         dataType: "jsonp",
+		jsonp: "callback",
+		jsonpCallback:"jQuery111300015518879258571427_1609679126184",
         success: function (jsonData) {
             var newHtml = `<div class="xben-day-img" ><img data-realurl="${jsonData.picture2}" src="${jsonData.picture2}"  /><p class="note xben-note" title="${jsonData.translation}"><span onclick="$('audio')[0].play();" title="点击朗读" class="ciba-eng">${jsonData.content}</span><span>${jsonData.note}    <span title="${jsonData.love}人喜欢" class="ciba-love" onclick="$('.love-count').html(parseInt($('.love-count').html()) + 1)"><span class="xben-love">♥</span>&nbsp;<span class="love-count">${jsonData.love}</span></span></span></p><audio src="${jsonData.tts}" hidden></audio></div>`;
             $("#walBox").append(newHtml);
