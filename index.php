@@ -44,6 +44,7 @@ function is_https() {
     }
     ?>
     <meta name="robots" content="index,follow"/>
+    <meta name="referrer" content="no-referrer" />
     <link rel="shortcut icon" href="https://zhouxiaoben.info/src/wp-content/uploads/2018/07/xiaobiaoti.png">
     <link rel="stylesheet" href="css/wallpaper.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
