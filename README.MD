@@ -6,7 +6,7 @@
 
 壁纸采集自 360壁纸库、必应首页的每日图片以及金山词霸开放平台
 
-相关api见 [https://zhouxiaoben.info/?p=9794](https://zhouxiaoben.info/?p=9794) 
+相关api见 [https://funnnny.fun/article/detail?id=2](https://funnnny.fun/article/detail?id=2) 
 
 本作品禁止任何形式的倒卖，转载请注明出处！
 
@@ -27,8 +27,8 @@
 
 ### 相关链接
 -----
-**壁纸在线演示** [https://wallpaper.zhouxiaoben.info](https://wallpaper.zhouxiaoben.info)
+**壁纸在线演示** [https://funnnny.fun/funny/bizhi/](https://funnnny.fun/funny/bizhi/)
 
-**壁纸详细介绍** [https://zhouxiaoben.info/?p=11771](https://zhouxiaoben.info/?p=11771)
+**壁纸详细介绍** [https://funnnny.fun/article/detail?id=3](https://funnnny.fun/article/detail?id=3)
 
 **GitHub** [https://github.com/water1996/xben-wallpaper](https://github.com/water1996/xben-wallpaper)
